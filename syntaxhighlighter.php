@@ -64,9 +64,9 @@ class SyntaxHighlighter {
 
 		// Outputting SyntaxHighlighter's JS and CSS
 		// add_action( 'wp_head',                            array( $this, 'output_header_placeholder' ),                     15 );
-		// add_action( 'admin_head',                         array( $this, 'output_header_placeholder' ),                     15 ); // For comments
+		add_action( 'admin_head',                         array( $this, 'output_header_placeholder' ),                     15 ); // For comments
 		// add_action( 'wp_footer',                          array( $this, 'maybe_output_scripts' ),                          15 );
-		// add_action( 'admin_footer',                       array( $this, 'maybe_output_scripts' ),                          15 ); // For comments
+		add_action( 'admin_footer',                       array( $this, 'maybe_output_scripts' ),                          15 ); // For comments
 
 		// Admin hooks
 		add_action( 'admin_init',                         array( $this, 'register_setting' ) );
